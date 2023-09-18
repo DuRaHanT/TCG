@@ -1,0 +1,144 @@
+[
+    {
+        "name": "Animal",
+        "cards": [
+            {
+                "cardTypeId": 4,
+                "name": "Cat",
+                "costs": [
+                    {
+                        "statId": 3,
+                        "value": 0,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "Nomal Cat",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "0",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [
+                    {
+                        "baseValue": 0,
+                        "statId": 0,
+                        "name": "Cost",
+                        "originalValue": 0,
+                        "minValue": 0,
+                        "maxValue": 10,
+                        "modifiers": []
+                    },
+                    {
+                        "baseValue": 1,
+                        "statId": 1,
+                        "name": "Life",
+                        "originalValue": 1,
+                        "minValue": 1,
+                        "maxValue": 10,
+                        "modifiers": []
+                    },
+                    {
+                        "baseValue": 0,
+                        "statId": 2,
+                        "name": "Attack",
+                        "originalValue": 0,
+                        "minValue": 0,
+                        "maxValue": 10,
+                        "modifiers": []
+                    }
+                ],
+                "keywords": [
+                    {
+                        "keywordId": 0,
+                        "valueId": 0
+                    }
+                ],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "$type": "CCGKit.OnPlayerTurnEndedTrigger"
+                        },
+                        "name": "Animal Cost Up",
+                        "type": "Triggered",
+                        "effect": {
+                            "keywordTypeId": 0,
+                            "keywordValueId": 0,
+                            "gameZoneId": 2,
+                            "cardTypeId": 0,
+                            "$type": "CCGKit.AddKeywordEffect"
+                        },
+                        "target": null,
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 0
+            }
+        ]
+    },
+    {
+        "name": "Spell",
+        "cards": [
+            {
+                "cardTypeId": 2,
+                "name": "Fire Ball",
+                "costs": [
+                    {
+                        "statId": 3,
+                        "value": 2,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "0",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [
+                    {
+                        "baseValue": 0,
+                        "statId": 2,
+                        "name": "Cost",
+                        "originalValue": 0,
+                        "minValue": 0,
+                        "maxValue": 10,
+                        "modifiers": []
+                    }
+                ],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 2,
+                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                        },
+                        "name": "Attack",
+                        "type": "Triggered",
+                        "effect": {
+                            "keywordTypeId": 0,
+                            "keywordValueId": 0,
+                            "gameZoneId": 2,
+                            "cardTypeId": 0,
+                            "$type": "CCGKit.AddKeywordEffect"
+                        },
+                        "target": null,
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 1
+            }
+        ]
+    }
+]

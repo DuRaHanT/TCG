@@ -11,7 +11,7 @@
         },
         {
             "originZoneId": 0,
-            "destinationZoneId": 1,
+            "destinationZoneId": 0,
             "numCards": 5,
             "name": "Move cards",
             "target": "AllPlayers",
@@ -20,35 +20,56 @@
     ],
     "turnStartActions": [
         {
-            "statId": 1,
+            "originZoneId": 0,
+            "destinationZoneId": 0,
+            "numCards": 2,
+            "name": "Move cards",
+            "target": "CurrentPlayer",
+            "$type": "CCGKit.MoveCardsAction"
+        },
+        {
+            "statId": 3,
             "value": {
-                "$type": "CCGKit.TurnNumberValue"
+                "constant": 2,
+                "$type": "CCGKit.ConstantValue"
             },
             "name": "Set player stat",
             "target": "CurrentPlayer",
             "$type": "CCGKit.SetPlayerStatAction"
         },
         {
-            "originZoneId": 0,
-            "destinationZoneId": 1,
-            "numCards": 2,
-            "name": "Move cards",
+            "statId": 3,
+            "value": {
+                "zoneId": 2,
+                "$type": "CCGKit.CardsInZoneValue"
+            },
+            "name": "Set player stat",
             "target": "CurrentPlayer",
-            "$type": "CCGKit.MoveCardsAction"
+            "$type": "CCGKit.SetPlayerStatAction"
+        },
+        {
+            "statId": 3,
+            "value": {
+                "zoneId": 3,
+                "$type": "CCGKit.CardsInZoneValue"
+            },
+            "name": "Set player stat",
+            "target": "CurrentPlayer",
+            "$type": "CCGKit.SetPlayerStatAction"
         }
     ],
     "turnEndActions": [],
     "endGameConditions": [
         {
             "statId": 0,
-            "op": "LessThanOrEqualTo",
+            "op": "EqualTo",
             "value": 0,
             "type": "Loss",
             "$type": "CCGKit.PlayerStatEndGameCondition"
         },
         {
             "zoneId": 0,
-            "op": "LessThanOrEqualTo",
+            "op": "EqualTo",
             "value": 0,
             "type": "Loss",
             "$type": "CCGKit.CardsInZoneEndGameCondition"

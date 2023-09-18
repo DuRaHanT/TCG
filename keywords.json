@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Type",
+        "values": [
+            {
+                "value": "Animal"
+            },
+            {
+                "value": null
+            },
+            {
+                "value": null
+            }
+        ],
+        "id": 1
+    },
+    {
+        "name": "Spell",
+        "values": [
+            {
+                "value": "Attcak"
+            },
+            {
+                "value": null
+            }
+        ],
+        "id": 0
+    }
+]

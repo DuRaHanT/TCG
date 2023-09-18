@@ -3,8 +3,8 @@
         "name": "Deck",
         "owner": "Player",
         "type": "Static",
-        "ownerVisibility": "Hidden",
-        "opponentVisibility": "Hidden",
+        "ownerVisibility": "Visible",
+        "opponentVisibility": "Visible",
         "hasMaxSize": false,
         "maxSize": 0,
         "id": 0
@@ -14,29 +14,39 @@
         "owner": "Player",
         "type": "Dynamic",
         "ownerVisibility": "Visible",
-        "opponentVisibility": "Hidden",
+        "opponentVisibility": "Visible",
         "hasMaxSize": false,
         "maxSize": 0,
         "id": 1
     },
     {
-        "name": "Board",
+        "name": "Field",
         "owner": "Player",
         "type": "Dynamic",
         "ownerVisibility": "Visible",
         "opponentVisibility": "Visible",
         "hasMaxSize": true,
-        "maxSize": 6,
+        "maxSize": 3,
         "id": 2
     },
     {
-        "name": "Graveyard",
+        "name": "Share_Field",
+        "owner": "Shared",
+        "type": "Dynamic",
+        "ownerVisibility": "Visible",
+        "opponentVisibility": "Visible",
+        "hasMaxSize": true,
+        "maxSize": 6,
+        "id": 3
+    },
+    {
+        "name": "Cemetry",
         "owner": "Player",
-        "type": "Static",
+        "type": "Dynamic",
         "ownerVisibility": "Visible",
         "opponentVisibility": "Visible",
         "hasMaxSize": false,
         "maxSize": 0,
-        "id": 3
+        "id": 4
     }
 ]
