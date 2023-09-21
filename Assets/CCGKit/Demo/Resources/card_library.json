@@ -897,6 +897,76 @@
         "cards": [
             {
                 "cardTypeId": 1,
+                "name": "Mana Up",
+                "costs": [
+                    {
+                        "statId": 1,
+                        "value": 0,
+                        "$type": "CCGKit.PayResourceCost"
+                    }
+                ],
+                "properties": [
+                    {
+                        "value": "+ 1 Mana",
+                        "name": "Text",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": "Spell",
+                        "name": "Picture",
+                        "$type": "CCGKit.StringProperty"
+                    },
+                    {
+                        "value": 2,
+                        "name": "MaxCopies",
+                        "$type": "CCGKit.IntProperty"
+                    },
+                    {
+                        "value": null,
+                        "name": "Material",
+                        "$type": "CCGKit.StringProperty"
+                    }
+                ],
+                "stats": [
+                    {
+                        "baseValue": 0,
+                        "statId": 0,
+                        "name": "Cost",
+                        "originalValue": 0,
+                        "minValue": 0,
+                        "maxValue": 10,
+                        "modifiers": []
+                    }
+                ],
+                "keywords": [],
+                "abilities": [
+                    {
+                        "trigger": {
+                            "zoneId": 2,
+                            "$type": "CCGKit.OnCardEnteredZoneTrigger"
+                        },
+                        "name": "Cost +1",
+                        "type": "Triggered",
+                        "effect": {
+                            "statId": 1,
+                            "value": {
+                                "constant": 1,
+                                "$type": "CCGKit.ConstantValue"
+                            },
+                            "duration": 0,
+                            "$type": "CCGKit.IncreasePlayerStatEffect"
+                        },
+                        "target": {
+                            "conditions": [],
+                            "$type": "CCGKit.PlayerTarget"
+                        },
+                        "$type": "CCGKit.TriggeredAbility"
+                    }
+                ],
+                "id": 147
+            },
+            {
+                "cardTypeId": 1,
                 "name": "2 Draw card",
                 "costs": [
                     {
